@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/bootstrap.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style..css" />
+    <link rel="icon" href="Saint.jpeg" type="image/x-icon" />
+    <title>Saint Investment - Home</title>
+  </head>
+  <body>
+    <div class="row bg-dark">
+      <div class="col-12 col-sm-12 col-md-12">
+        <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+          <div class="container-fluid">
+            <img
+              src="Saint.jpeg"
+              alt="Saint logo"
+              width="60"
+              height="50"
+              class="mx-4"
+            />
+            <a class="navbar-brand mx-1" href="boots.html">Saint</a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a
+                    class="nav-link active mx-4"
+                    aria-current="page"
+                    href="Subcription.html"
+                    >Subscriptions</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link mx-4" href="team.html">Team</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link mx-4" href="payment.html">Payment</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link mx-4" href="reports.html">Reporting</a>
+                </li>
+              </ul>
+            </div>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#Details"
+              aria-controls="Details"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="Details">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                  <a
+                    class="nav-link my-2 text-light pl-3"
+                    aria-current="page"
+                    href="profile.html"
+                    >My Account</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link my-2 text-light pl-3" href="billing.html"
+                    >Billing</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link my-2 text-light pl-3"
+                    href="login.html"
+                    onclick="logout()"
+                    >Logout</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+    <div class="row mx-1">
+      <div class="col-12 col-md-3 p-2">
+        <div class="card p-1 shadow-lg text-tertiary">
+          <div class="card-body">
+            <h3 class="card-title">SPENDING</h3>
+            <p class="card-text">$<span class="final"></span></p>
+            <button
+              class="btn btn-outline-tertiary"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#spending"
+              aria-expanded="false"
+              aria-controls="spending"
+            >
+              Details
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-3 p-2">
+        <div class="card p-1 shadow-lg text-success">
+          <div class="card-body">
+            <h3 class="card-title">Profit</h3>
+            <p class="card-text">$<span class="PROFIT"></span></p>
+            <button
+              class="btn btn-outline-success"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#profit"
+              aria-expanded="false"
+              aria-controls="profit"
+            >
+              Details
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-3 p-2">
+        <div class="card p-1 shadow-lg text-danger">
+          <div class="card-body">
+            <h3 class="card-title">Loss</h3>
+            <p class="card-text">-$<span class="LOSS"></span></p>
+            <button
+              class="btn btn-outline-danger"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#loss"
+              aria-expanded="false"
+              aria-controls="loss"
+            >
+              Details
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-3 p-2">
+        <div class="card p-1 shadow-lg">
+          <div class="card-body text-secondary">
+            <h3 class="card-title">Balance</h3>
+            <p class="card-text">$<span class="BALANCE"></span></p>
+            <button
+              class="btn btn-outline-secondary"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#balance"
+              aria-expanded="false"
+              aria-controls="balance"
+            >
+              Details
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="collapse bg-dark text-light p-4" id="spending">
+      <div class="row">
+        <h3 class="col-6">Spending:</h3>
+        <div class="col-6 text-right">
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-toggle="collapse"
+            data-bs-target="#spending"
+            aria-controls="spending"
+            aria-label="Close"
+          ></button>
+        </div>
+      </div>
+      <h4>Last month:$ <span id="finals"></span></h4>
+      <h4>This month:$<span class="final"></span></h4>
+    </div>
+
+    <div class="collapse bg-success text-light p-4" id="profit">
+      <div class="row">
+        <h3 class="col-6">Profit:</h3>
+        <div class="col-6 text-right">
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-toggle="collapse"
+            data-bs-target="#profit"
+            aria-controls="profit"
+            aria-label="Close"
+          ></button>
+        </div>
+      </div>
+      <h4>Last month:$ <span id="profits"></span></h4>
+      <h4>This month:$<span class="PROFIT"></span></h4>
+    </div>
+    <div class="collapse bg-danger text-light p-4" id="loss">
+      <div class="row">
+        <h3 class="col-6">Loss:</h3>
+        <div class="col-6 text-right">
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-toggle="collapse"
+            data-bs-target="#loss"
+            aria-controls="loss"
+            aria-label="Close"
+          ></button>
+        </div>
+      </div>
+      <h4>Last month:$ <span id="lose"></span></h4>
+      <h4>This month:$<span class="LOSS"></span></h4>
+    </div>
+    <div class="collapse bg-secondary text-light p-4" id="balance">
+      <div class="row">
+        <h3 class="col-6">Balance:</h3>
+        <div class="col-6 text-right">
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-toggle="collapse"
+            data-bs-target="#balance"
+            aria-controls="balance"
+            aria-label="Close"
+          ></button>
+        </div>
+      </div>
+      <h4>Last month:$ <span id="bal"></span></h4>
+      <h4>This month:$<span class="BALANCE"></span></h4>
+    </div>
+    <div class="container">
+      <div id="liveAlertPlaceholder"></div>
+    </div>
+    <div class="row mx-2">
+      <div class="col-6"><h2>Market</h2></div>
+      <div class="col-6 text-right">
+        <button
+          class="btn btn-sm btn-outline-secondary"
+          data-bs-toggle="modal"
+          data-bs-target="#exampleModal"
+        >
+          Add New Application
+        </button>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <table
+          class="table table-hover table-border text-nowrap table-responsive"
+        >
+          <thead>
+            <tr>
+              <th scope="col" class="col-2">Name</th>
+              <th scope="col" class="col-1 bg-secondary">Annual Spend</th>
+              <th scope="col" class="col-2">Company</th>
+              <th scope="col" class="col-2">Business Unit</th>
+              <th scope="col" class="col-1">License</th>
+              <th scope="col" class="col-1">Users</th>
+              <th scope="col" class="col-1">Active Users</th>
+              <th scope="col" class="col-2">Current Renewal date</th>
+            </tr>
+          </thead>
+          <tbody id="table">
+            <tr>
+              <td scope="row">Google Analytics</td>
+              <td class="bg-secondary">
+                $<span class="price">1,000,000</span>
+              </td>
+              <td>Web Analytics</td>
+              <td>Marketing</td>
+              <td>1,200</td>
+              <td>1,109</td>
+              <td>987</td>
+              <td>2014-07-21</td>
+            </tr>
+            <tr>
+              <td scope="row">Adobe Creative Cloud</td>
+              <td class="bg-secondary">
+                $<span class="price">3,200,000</span>
+              </td>
+              <td>Design & Creativity</td>
+              <td>Design</td>
+              <td>2,000</td>
+              <td>1,843</td>
+              <td>1,695</td>
+              <td>2020-02-08</td>
+            </tr>
+            <tr>
+              <td scope="row">Microsoft Dynamics 365</td>
+              <td class="bg-secondary">
+                $<span class="price">4,800,000</span>
+              </td>
+              <td>Enterprise Resource Planning</td>
+              <td>Finance</td>
+              <td>2,500</td>
+              <td>2,276</td>
+              <td>1,987</td>
+              <td>2021-05-10</td>
+            </tr>
+            <tr>
+              <td scope="row">Adobe Experience Manager</td>
+              <td class="bg-secondary">
+                $<span class="price">5,600,000</span>
+              </td>
+              <td>Content Management</td>
+              <td>Marketing</td>
+              <td>1,800</td>
+              <td>1,589</td>
+              <td>1,378</td>
+              <td>2020-09-30</td>
+            </tr>
+            <tr>
+              <td scope="row">Atlassian Confluence</td>
+              <td class="bg-secondary">
+                $<span class="price">1,300,000</span>
+              </td>
+              <td>Team Collaboration</td>
+              <td>IT</td>
+              <td>700</td>
+              <td>642</td>
+              <td>534</td>
+              <td>2017-11-25</td>
+            </tr>
+            <tr>
+              <td scope="row">VMware vSphere</td>
+              <td class="bg-secondary">
+                $<span class="price">3,750,000</span>
+              </td>
+              <td>Virtualization</td>
+              <td>IT</td>
+              <td>1,500</td>
+              <td>1,327</td>
+              <td>1,189</td>
+              <td>2018-06-12</td>
+            </tr>
+            <tr>
+              <td scope="row">Amazon Web Services (AWS)</td>
+              <td class="bg-secondary">
+                $<span class="price">6,200,000</span>
+              </td>
+              <td>Cloud Computing</td>
+              <td>IT</td>
+              <td>5,000</td>
+              <td>4,712</td>
+              <td>4,289</td>
+              <td>2021-08-05</td>
+            </tr>
+            <tr>
+              <td scope="row">Sage Intacct</td>
+              <td class="bg-secondary">
+                $<span class="price">2,100,000</span>
+              </td>
+              <td>Accounting Software</td>
+              <td>Finance</td>
+              <td>900</td>
+              <td>825</td>
+              <td>712</td>
+              <td>2019-03-19</td>
+            </tr>
+            <tr>
+              <td scope="row">Slack</td>
+              <td class="bg-secondary">
+                $<span class="price">1,850,000</span>
+              </td>
+              <td>Team Communication</td>
+              <td>IT</td>
+              <td>1,200</td>
+              <td>1,078</td>
+              <td>956</td>
+              <td>2017-07-30</td>
+            </tr>
+            <tr>
+              <td scope="row">Workday</td>
+              <td class="bg-secondary">
+                $<span class="price">5,300,000</span>
+              </td>
+              <td>Human Capital Management</td>
+              <td>HR</td>
+              <td>3,500</td>
+              <td>3,218</td>
+              <td>2,976</td>
+              <td>2022-02-14</td>
+            </tr>
+          </tbody>
+        </table>
+        <nav aria-label="Page navigation example">
+          <ul class="pagination justify-content-center">
+            <li class="page-item">
+              <a class="page-link" href="boots1.html" aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+              </a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="boots.html">1</a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="boots1.html">2</a>
+            </li>
+            <li class="page-item disabled">
+              <a class="page-link" href="#">3</a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="boots3.html">4</a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="boots3.html" aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <p class="text-center">Copyright &copy; <span id="year"></span></p>
+      </div>
+    </div>
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-md">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">
+              Add New Application
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-floating mb-3 mb-3">
+                <input class="form-control" id="Name" required />
+                <label for="Name">Company's Name</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input class="form-control" id="Spend" required />
+                <label for="Spend">Annual Spending</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input class="form-control" id="Company" required />
+                <label for="Company">Company</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input class="form-control" id="Business" required />
+                <label for="Business">Business</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input
+                  type="number"
+                  class="form-control"
+                  required
+                  id="License"
+                />
+                <label for="License">License</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input type="number" class="form-control" required id="Users" />
+                <label for="Users">Users</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input
+                  type="number"
+                  class="form-control"
+                  required
+                  id="Active"
+                />
+                <label for="Active">Active Users</label>
+              </div>
+              <div class="form-floating mb-3" id="date">
+                <input
+                  type="Date"
+                  max="2023-09-01"
+                  required
+                  class="form-control"
+                  id="Renewal"
+                />
+                <label for="Renewal">Renewal Date</label>
+              </div>
+            </form>
+            <button
+              type=""
+              id="submit"
+              class="btn btn-primary btn-sm my-2 mx-1"
+              data-bs-dismiss="modal"
+            >
+              Submit
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/bootstrap.bundle.js"></script>
+    <script src="boots.js"></script>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+gx-gutter x
+gy-gutter y
+p-padding
+col-column small
+xs-extra
+sm-small
+md-medium
+lg-large
+xl-extra large
+xxl-extra extra large
+border
+row-align-center
+row-align-start
+row-align-end
+row-justify-center
+row-justify-start
+row-justify-end
+row-justify-around
+row-justify-evenly
+row-justify-between
+bg-light light background
+bg-dark dark background
+btn
+btn-dark
+btn-light
+btn-primary
+btn-secondary
+btn-warning
+btn-danger
+btn btn-link
+btn-success
+btn-sm small button
+btn-lg large button
+btn-outline removes background color
+disabled disables it
+d-grid
+data-bs-toggle="button"  act as a toggle button
+aria-pressed="true"
+d-inline display inline
